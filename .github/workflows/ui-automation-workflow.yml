@@ -24,13 +24,13 @@ jobs:
         distribution: 'temurin'
 
     # install browser 
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2.1.0
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v2.1.0
     
     #setup gradlew
-      - name : Setup Gradle
-        run : chmod +x gradlew
+    - name : Setup Gradle
+      run : chmod +x gradlew
 
     #execute gradle command for running cucumber test
-      - name : execute test 
-        run : ./gradlew cucumber
+    - name : execute test 
+      run : ./gradlew cucumber
