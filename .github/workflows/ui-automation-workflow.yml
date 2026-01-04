@@ -9,14 +9,12 @@ on:
     workflow_dispatch:
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
+    
     steps:
     #download repo
-    - uses: actions/checkout@v4
+    - name : Check Repo
+      uses: actions/checkout@v4
 
     
     - name: Set up JDK 17
