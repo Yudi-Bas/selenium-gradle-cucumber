@@ -23,6 +23,9 @@ dependencies {
     //Cucumber
     testImplementation 'io.cucumber:cucumber-java:7.14.0'
     testImplementation 'io.cucumber:cucumber-junit:7.14.0'
+
+    // resassured
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
     //JUnit
     testImplementation 'junit:junit:4.13.2'
     
@@ -40,3 +43,13 @@ test {
     // Use JUnit Platform for unit tests.
     useJUnit()
 }
+tasks.register('webTest', Test) {
+    useJUnit()
+    include '**/WebTestRunner.class'
+}
+
+tasks.register('apiTest', Test) {
+    useJUnit()
+    include '**/ApiTestRunner.class'
+}
+
